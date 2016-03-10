@@ -740,5 +740,25 @@ namespace MimeTypes
 
             throw new ArgumentException("Requested mime type is not registered: " + mimeType);
         }
+
+        /// <summary>
+        /// Gets the known extensions.
+        /// </summary>
+        /// <param name="mimeType">Type of the MIME.</param>
+        /// <returns>IEnumerable&lt;System.String&gt; All known file extensions.</returns>
+        public static IEnumerable<string> GetKnownExtensions(string mimeType)
+        {
+            if (string.IsNullOrWhiteSpace(mimeType))
+            {
+                throw new ArgumentNullException(nameof(mimeType));
+            }
+
+            if (mimeType.StartsWith("."))
+            {
+                throw new ArgumentException("Requested mime type is not valid: " + mimeType);
+            }
+
+            return _mappings.Value.Where(s => s.Value.Contains(mimeType.ToLower())).Select(s => s.Key);
+        }
     }
 }
