@@ -291,7 +291,7 @@ namespace MimeTypes
                 { ".movie", new List<string>() { "video/x-sgi-movie" } },
                 { ".mp2", new List<string>() { "video/mpeg" } },
                 { ".mp2v", new List<string>() { "video/mpeg" } },
-                { ".mp3", new List<string>() { "audio/mpeg" } },
+                { ".mp3", new List<string>() { "audio/mpeg", "audio/mpeg3", "audio/x-mpeg-3" } },
                 { ".mp4", new List<string>() { "video/mp4" } },
                 { ".mp4v", new List<string>() { "video/mp4" } },
                 { ".mpa", new List<string>() { "video/mpeg" } },
@@ -622,7 +622,7 @@ namespace MimeTypes
                 { ".xtp", new List<string>() { "application/octet-stream" } },
                 { ".xwd", new List<string>() { "image/x-xwindowdump" } },
                 { ".z", new List<string>() { "application/x-compress" } },
-                { ".zip", new List<string>() { "application/zip" } },
+                { ".zip", new List<string>() { "application/zip", "application/octet-stream", "application/x-zip-compressed" } },
 
                 // mime to extension
                 { "application/fsharp-script", new List<string>() { ".fsx" } },
@@ -693,7 +693,7 @@ namespace MimeTypes
         }
 
         /// <summary>
-        /// Gets the type of the MIME.
+        /// Gets the MIME.
         /// </summary>
         /// <param name="extension">The file extension.</param>
         /// <returns>List&lt;System.String&gt;Mime List.</returns>
@@ -721,7 +721,7 @@ namespace MimeTypes
         /// <returns>List&lt;System.String&gt;file extension.</returns>
         public static List<string> GetExtension(string mimeType)
         {
-            if (mimeType == null)
+            if (string.IsNullOrWhiteSpace(mimeType))
             {
                 throw new ArgumentNullException(nameof(mimeType));
             }
