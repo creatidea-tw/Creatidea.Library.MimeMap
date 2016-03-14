@@ -29,15 +29,19 @@ namespace MimeTypes
                 //
                 // Some added based on http://www.iana.org/assignments/media-types/media-types.xhtml
                 // which lists mime types, but not extensions
-                //
+                // mime list: http://www.sitepoint.com/web-foundations/mime-types-complete-list/
+
                 { ".323", new List<string>() { "text/h323" } },
+                { ".3dm", new List<string>() { "x-world/x-3dmf" } },
+                { ".3dmf", new List<string>() { "x-world/x-3dmf" } },
                 { ".3g2", new List<string>() { "video/3gpp2" } },
                 { ".3gp", new List<string>() { "video/3gpp" } },
                 { ".3gp2", new List<string>() { "video/3gpp2" } },
                 { ".3gpp", new List<string>() { "video/3gpp" } },
                 { ".7z", new List<string>() { "application/x-7z-compressed" } },
+                { ".a", new List<string>() { "application/octet-stream" } },
                 { ".aa", new List<string>() { "audio/audible" } },
-                { ".AAC", new List<string>() { "audio/aac" } },
+                { ".aac", new List<string>() { "audio/aac" } },
                 { ".aaf", new List<string>() { "application/octet-stream" } },
                 { ".aax", new List<string>() { "audio/vnd.audible.aax" } },
                 { ".ac3", new List<string>() { "audio/ac3" } },
@@ -55,8 +59,8 @@ namespace MimeTypes
                 { ".ade", new List<string>() { "application/msaccess" } },
                 { ".adobebridge", new List<string>() { "application/x-bridge-url" } },
                 { ".adp", new List<string>() { "application/msaccess" } },
-                { ".ADT", new List<string>() { "audio/vnd.dlna.adts" } },
-                { ".ADTS", new List<string>() { "audio/aac" } },
+                { ".adt", new List<string>() { "audio/vnd.dlna.adts" } },
+                { ".adts", new List<string>() { "audio/aac" } },
                 { ".afm", new List<string>() { "application/octet-stream" } },
                 { ".ai", new List<string>() { "application/postscript" } },
                 { ".aif", new List<string>() { "audio/aiff" } },
@@ -683,7 +687,7 @@ namespace MimeTypes
             // adding reverse mappings, so the dictionary contains both mappings of extensions to mime types and mime types to extensions.
             foreach (var mapping in cache)
             {
-                if (!mappings.ContainsKey(mapping.Key))
+                if (!mappings.ContainsKey(mapping.Value.FirstOrDefault()))
                 {
                     mappings.Add(mapping.Value.FirstOrDefault(), new List<string>() { mapping.Key });
                 }
