@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package >
+    <metadata>
+        <id>MimeTypeMap.List</id>
+        <version>1.0.0</version>
+        <title>MimeTypeMap.List</title>
+        <authors>Money</authors>
+        <owners>Money</owners>
+        <description>
+            Provides a huge two-way mapping of file extensions to mime types and mime types to file extensions.
+        </description>
+        <releaseNotes>
+        </releaseNotes>
+        <summary>
+            Provides a huge two-way mapping of file extensions to mime types and mime types to file extensions.
+        </summary>
+        <language>en-US</language>
+        <projectUrl>https://github.com/lettucebo/MimeTypeMap.List</projectUrl>
+        <iconUrl>https://i.imgur.com/2H44Wnd.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <licenseUrl>http://opensource.org/licenses/Apache-2.0</licenseUrl>
+        <copyright>Copyright  2016</copyright>
+        <dependencies></dependencies>
+        <references></references>
+        <tags></tags>
+    </metadata>
+    <files>
+        <file src="lib\" target="lib" />
+        <file src="tools\" target="tools" />
+        <file src="content\" target="content" />
+    </files>
+</package>
