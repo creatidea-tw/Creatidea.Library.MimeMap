@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MimeTypeMap.List", "MimeTypes\MimeTypeMap.List.csproj", "{D54FB6F6-9042-4925-BFC5-947A363F0849}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MimeTypeMap.List", "MimeTypeMap.List\MimeTypeMap.List.csproj", "{D54FB6F6-9042-4925-BFC5-947A363F0849}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MimeTypeMap.List.Test", "MimeTypeMapTest\MimeTypeMap.List.Test.csproj", "{62EFD1E4-73CF-46E3-AF84-DB91F14DCA6E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MimeTypeMap.List.Test", "MimeTypeMap.List.Test\MimeTypeMap.List.Test.csproj", "{62EFD1E4-73CF-46E3-AF84-DB91F14DCA6E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MimeTypeMap.List.NuGet", "MimeTypeMap.List.NuGet\MimeTypeMap.List.NuGet.csproj", "{0451BAEF-DF2E-4B98-8644-94EE9415E389}"
 EndProject
