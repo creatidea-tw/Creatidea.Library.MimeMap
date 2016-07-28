@@ -17,10 +17,11 @@ Most mime types that have multiple possible extensions are pre-defined to get th
 up extension by mime type. Since multiple extensions can map to the same mime type, it is not necessary that `GetExtension(GetMimeType(ext))` returns the original extension - it will return the most common extension.
 
 ## Installation
+A NuGet package is available for easy integration into VisualStudio and automatic updates. Alternatively, you can clone and reference or copy the class to your project.
 
-A [NuGet package](https://www.nuget.org/packages/MediaTypeMap) is available for easy integration into VisualStudio and automatic updates.  Alternatively, you can clone and reference or copy the class to your project.
-
-Originally posted on StackOverflow here: http://stackoverflow.com/questions/1029740/get-mime-type-from-filename-extension
+```
+Install-Package MimeTypeMap.List
+```
 
 ## Collaboration
 
