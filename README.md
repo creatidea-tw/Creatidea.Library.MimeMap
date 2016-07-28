@@ -1,4 +1,4 @@
-# MimeTypeMap
+# MimeTypeMap.List
 
 ## Summary
 Provides a huge two-way mapping of file extensions to mime types and mime types to file extensions, e.g.:
