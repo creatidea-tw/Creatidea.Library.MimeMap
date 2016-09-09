@@ -27,14 +27,6 @@
             {
                 Console.WriteLine(mime);
             }
-
-            // demo get extension from mime type
-            Console.WriteLine();
-            Console.WriteLine("application/octet-stream -> ");
-            foreach (string mime in MimeTypeMap.GetExtension("application/octet-stream"))
-            {
-                Console.WriteLine(mime);
-            }
         }
     }
 }
