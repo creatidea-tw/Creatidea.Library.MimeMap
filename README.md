@@ -55,13 +55,3 @@ Console.WriteLine("audio/wav -> " + MimeTypeMap.GetExtension("audio/wav")); // "
 ```
 
 Pass in a mime type and get an extension back. If the mime type is not registered, an error is thrown.
-
-## Changelog
-
-2.1.0 - August 14, 2015 - Refactor and add GetExtension method.
-
-1.2.0 - April 22, 2015 - Breaking changes due to refactorings. You'll need to change namespace after this update. Also added OpenOffice related mime types, in a few cases overwriting rarely used MS mime types for the same extensions.
-
-1.1.0 - April 22, 2015 - Merge pull requests
-
-1.0.0 - Original load from StackOverflow as is
