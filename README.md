@@ -17,9 +17,11 @@ Provides a huge two-way mapping of file extensions to mime types and mime types 
 
 ## Note
 
-There is a little different behavior between [samuelneff](https://github.com/samuelneff/MimeTypeMap) version. In my experience, sometimes for one extension will have different mime type depend on various browser. 
+There is a little different behavior between [samuelneff](https://github.com/samuelneff/MimeTypeMap) version. 
 
-**This package will return all possible mime.**
+In my experience, sometimes for one extension will have different mime type depend on various browser. 
+
+**This package will return all match mime.**
 
 For example: `.mp3` and `zip` will have multi mime type depend on various browser, see: https://stackoverflow.com/a/28021591/1799047
 , `.zip` will have three mime type: `application/zip, application/octet-stream, application/x-zip-compressed`
