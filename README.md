@@ -13,21 +13,34 @@ Provides a huge two-way mapping of file extensions to mime types and mime types 
 ...
 ```
 
-Most mime types that have multiple possible extensions are pre-defined to get the most common extension when looking
-up extension by mime type. Since multiple extensions can map to the same mime type, it is not necessary that `GetExtension(GetMimeType(ext))` returns the original extension - it will return the most common extension.
+---
+
+## Note
+
+Most mime types that have multiple possible extensions are pre-defined to get the most common extension when looking up extension by mime type. Since multiple extensions can map to the same mime type, it is not necessary that `GetExtension(GetMimeType(ext))` returns the original extension - it will return the most common extension.
+
+There is different behavior with [samuelneff](https://github.com/samuelneff/MimeTypeMap) version. In my experience, sometimes for one extension will have different mime type depend on various browser. 
+
+**This package will return all possible mime.**
+
+For example: `.mp3` and `zip` will have multi mime type depend on various browser, see: https://stackoverflow.com/a/28021591/1799047
+`.zip` will have three mime type: `application/zip, application/octet-stream, application/x-zip-compressed`
 
 ## Installation
+
 A NuGet package is available for easy integration into VisualStudio and automatic updates. Alternatively, you can clone and reference or copy the class to your project.
 
-```
+```bash
 Install-Package MimeTypeMap.List
 ```
+
+## Support Platform
+
+Support .NET 4.5 above or .NET Core 1.0 above
 
 ## Collaboration
 
 Please submit pull requests for any additions. Thanks!
-
-Sam
 
 
 ## Usage
@@ -35,7 +48,7 @@ Sam
 After installation MimeTypeMap, include the following using statement in your class:
 
 ```cs
-using MimeTypes;
+using MimeTypeMap.List;
 ```
 
 ### Getting the mime type to an extension
@@ -51,7 +64,7 @@ If no mime type is found then the generic "application/octet-stream" is returned
 ### Getting the extension to a mime type
 
 ```cs
-Console.WriteLine("audio/wav -> " + MimeTypeMap.GetExtension("audio/wav")); // ".wav"
+Console.WriteLine("audio/wav -> " + MimeTypeMap.GetExtension("audio/wav")); // ".wav, .wave"
 ```
 
 Pass in a mime type and get an extension back. If the mime type is not registered, an error is thrown.
