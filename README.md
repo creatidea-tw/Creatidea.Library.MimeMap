@@ -1,4 +1,7 @@
 # MimeTypeMap.List
+简体中文：[README.CN.md](https://github.com/lettucebo/MimeTypeMap.List/blob/master/README.CN.md)
+<br/>
+正體中文：[README.TW.md](https://github.com/lettucebo/MimeTypeMap.List/blob/master/README.TW.md)
 
 ## Summary
 Provides a huge two-way mapping of file extensions to mime types and mime types to file extensions, e.g.:
@@ -12,7 +15,6 @@ Provides a huge two-way mapping of file extensions to mime types and mime types 
 {".json", "application/json"},
 ...
 ```
-
 ---
 
 ## Note
