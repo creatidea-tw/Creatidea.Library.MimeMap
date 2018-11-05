@@ -17,8 +17,6 @@ Provides a huge two-way mapping of file extensions to mime types and mime types 
 
 ## Note
 
-Most mime types that have multiple possible extensions are pre-defined to get the most common extension when looking up extension by mime type. Since multiple extensions can map to the same mime type, it is not necessary that `GetExtension(GetMimeType(ext))` returns the original extension - it will return the most common extension.
-
 There is different behavior with [samuelneff](https://github.com/samuelneff/MimeTypeMap) version. In my experience, sometimes for one extension will have different mime type depend on various browser. 
 
 **This package will return all possible mime.**
