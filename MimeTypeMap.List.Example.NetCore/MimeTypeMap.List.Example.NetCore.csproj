@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MimeTypeMap.List.Mime\MimeTypeMap.List.Mime.csproj" />
+    <ProjectReference Include="..\MimeTypeMap.List\MimeTypeMap.List.csproj" />
+  </ItemGroup>
+
+</Project>

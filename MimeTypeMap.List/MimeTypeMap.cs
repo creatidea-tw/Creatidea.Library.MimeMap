@@ -1,4 +1,6 @@
-﻿namespace MimeTypeMap.List
+﻿using MimeTypeMap.List.Mime;
+
+namespace MimeTypeMap.List
 {
     using System;
     using System.Collections.Generic;
@@ -15,27 +17,16 @@
 
         private static IDictionary<string, List<string>> BuildMappings()
         {
-            // need ToList() to avoid modifying while still enumerating
-            var cache = MappingList.Mappings.ToList();
-
-            // adding reverse mappings, so the dictionary contains both mappings of extensions to mime types and mime types to extensions.
-            foreach (var mapping in cache)
-            {
-                if (!MappingList.Mappings.ContainsKey(mapping.Value.FirstOrDefault()))
-                {
-                    MappingList.Mappings.Add(mapping.Value.FirstOrDefault(), new List<string>() { mapping.Key });
-                }
-            }
-
-            return MappingList.Mappings;
+            return MimeList.Mappings;
         }
 
         /// <summary>
-        /// Gets the MIME.
+        /// Gets the MIME by file extension.
         /// </summary>
         /// <param name="extension">The file extension.</param>
         /// <returns>List&lt;System.String&gt;Mime List.</returns>
-        public static List<string> GetMimeType(string extension)
+        /// <remarks>if there is no matching mimetype then will retrun "application/octet-stream"</remarks>
+        public static IEnumerable<string> GetMimeType(string extension)
         {
             if (string.IsNullOrWhiteSpace(extension))
             {
@@ -44,47 +35,18 @@
 
             if (!extension.StartsWith("."))
             {
-                extension = "." + extension;
+                extension = $".{extension}";
             }
 
-            List<string> mime;
-
-            return Mappings.Value.TryGetValue(extension, out mime) ? mime : new List<string>() { "application/octet-stream" };
+            return Mappings.Value.TryGetValue(extension, out List<string> mime) ? mime : new List<string>() { "application/octet-stream" };
         }
 
         /// <summary>
-        /// Gets the extension.
-        /// </summary>
-        /// <param name="mimeType">Type of the MIME.</param>
-        /// <returns>List&lt;System.String&gt;file extension.</returns>
-        public static List<string> GetExtension(string mimeType)
-        {
-            if (string.IsNullOrWhiteSpace(mimeType))
-            {
-                throw new ArgumentNullException(nameof(mimeType));
-            }
-
-            if (mimeType.StartsWith("."))
-            {
-                throw new ArgumentException("Requested mime type is not valid: " + mimeType);
-            }
-
-            List<string> extension;
-
-            if (Mappings.Value.TryGetValue(mimeType, out extension))
-            {
-                return extension;
-            }
-
-            throw new ArgumentException("Requested mime type is not registered: " + mimeType);
-        }
-
-        /// <summary>
-        /// Gets the known extensions.
+        /// Gets the extensions by mime type.
         /// </summary>
         /// <param name="mimeType">Type of the MIME.</param>
         /// <returns>IEnumerable&lt;System.String&gt; All known file extensions.</returns>
-        public static IEnumerable<string> GetKnownExtensions(string mimeType)
+        public static IEnumerable<string> GetExtension(string mimeType)
         {
             if (string.IsNullOrWhiteSpace(mimeType))
             {
@@ -93,7 +55,7 @@
 
             if (mimeType.StartsWith("."))
             {
-                throw new ArgumentException("Requested mime type is not valid: " + mimeType);
+                throw new ArgumentException($"Requested mime type is not valid: {mimeType}", nameof(mimeType));
             }
 
             return Mappings.Value.Where(s => s.Value.Contains(mimeType.ToLower())).Select(s => s.Key);
