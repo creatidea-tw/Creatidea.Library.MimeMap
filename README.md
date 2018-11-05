@@ -66,3 +66,7 @@ Console.WriteLine("audio/wav -> " + MimeTypeMap.GetExtension("audio/wav")); // "
 ```
 
 Pass in a mime type and get an extension back. If the mime type is not registered, an error is thrown.
+
+### Example
+
+see the example project and try for yourself
