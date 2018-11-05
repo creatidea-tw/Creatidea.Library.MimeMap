@@ -26,6 +26,13 @@ namespace MimeTypeMap.List.Test
         }
 
         [TestMethod]
+        public void GetExtensionContainTest()
+        {
+            var result = MimeTypeMap.GetExtension("audio/wav").ToList();
+            Assert.AreEqual(true, result.Contains(".wav"));
+        }
+
+        [TestMethod]
         public void GetSingleMimeTest()
         {
             var result = MimeTypeMap.GetMimeType("txt").ToList(); ;
