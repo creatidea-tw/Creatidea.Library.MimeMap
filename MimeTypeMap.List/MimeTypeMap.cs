@@ -1,11 +1,9 @@
-﻿using MimeTypeMap.List.Mime;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace MimeTypeMap.List
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-
     public static class MimeTypeMap
     {
         private static readonly Lazy<IDictionary<string, List<string>>> Mappings;

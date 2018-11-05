@@ -24,7 +24,7 @@ namespace MimeTypeMap.List.Example.NetCore
             // demo get extension from mime type
             Console.WriteLine();
             Console.WriteLine("audio/wav -> ");
-            foreach (string mime in MimeTypeMap.GetExtension("application/octet-stream"))
+            foreach (string mime in MimeTypeMap.GetExtension("audio/wav"))
             {
                 Console.WriteLine(mime);
             }

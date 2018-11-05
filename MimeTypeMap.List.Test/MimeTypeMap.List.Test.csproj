@@ -13,7 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MimeTypeMap.List.Mime\MimeTypeMap.List.Mime.csproj" />
     <ProjectReference Include="..\MimeTypeMap.List\MimeTypeMap.List.csproj" />
   </ItemGroup>
 

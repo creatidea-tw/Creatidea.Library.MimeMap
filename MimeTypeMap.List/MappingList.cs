@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace MimeTypeMap.List.Mime
+namespace MimeTypeMap.List
 {
     public class MimeList
     {

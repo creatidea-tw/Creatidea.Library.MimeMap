@@ -2,10 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.0</TargetFramework>
+    <Authors>Money</Authors>
+    <Version>2.0.0</Version>
   </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\MimeTypeMap.List.Mime\MimeTypeMap.List.Mime.csproj" />
-  </ItemGroup>
 
 </Project>

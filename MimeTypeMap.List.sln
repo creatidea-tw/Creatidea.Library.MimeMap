@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MimeTypeMap.List.Mime", "MimeTypeMap.List.Mime\MimeTypeMap.List.Mime.csproj", "{7C9CA7D8-ACD8-4673-A18E-CA6FFFF9D32A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MimeTypeMap.List", "MimeTypeMap.List\MimeTypeMap.List.csproj", "{7816133F-CD41-411D-9ED6-E21670FF0149}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MimeTypeMap.List", "MimeTypeMap.List\MimeTypeMap.List.csproj", "{7816133F-CD41-411D-9ED6-E21670FF0149}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MimeTypeMap.List.Example.NetCore", "MimeTypeMap.List.Example.NetCore\MimeTypeMap.List.Example.NetCore.csproj", "{89561495-BBA3-43B6-8DDB-643F2DDEF534}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MimeTypeMap.List.Example.NetCore", "MimeTypeMap.List.Example.NetCore\MimeTypeMap.List.Example.NetCore.csproj", "{89561495-BBA3-43B6-8DDB-643F2DDEF534}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MimeTypeMap.List.Example.Net", "MimeTypeMap.List.Example.Net\MimeTypeMap.List.Example.Net.csproj", "{B6F3A1E7-336E-485A-B66E-434E491F10EB}"
 EndProject
@@ -23,18 +21,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7C9CA7D8-ACD8-4673-A18E-CA6FFFF9D32A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7C9CA7D8-ACD8-4673-A18E-CA6FFFF9D32A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7C9CA7D8-ACD8-4673-A18E-CA6FFFF9D32A}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{7C9CA7D8-ACD8-4673-A18E-CA6FFFF9D32A}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{7C9CA7D8-ACD8-4673-A18E-CA6FFFF9D32A}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{7C9CA7D8-ACD8-4673-A18E-CA6FFFF9D32A}.Debug|x86.Build.0 = Debug|Any CPU
-		{7C9CA7D8-ACD8-4673-A18E-CA6FFFF9D32A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7C9CA7D8-ACD8-4673-A18E-CA6FFFF9D32A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7C9CA7D8-ACD8-4673-A18E-CA6FFFF9D32A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{7C9CA7D8-ACD8-4673-A18E-CA6FFFF9D32A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{7C9CA7D8-ACD8-4673-A18E-CA6FFFF9D32A}.Release|x86.ActiveCfg = Release|Any CPU
-		{7C9CA7D8-ACD8-4673-A18E-CA6FFFF9D32A}.Release|x86.Build.0 = Release|Any CPU
 		{7816133F-CD41-411D-9ED6-E21670FF0149}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7816133F-CD41-411D-9ED6-E21670FF0149}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7816133F-CD41-411D-9ED6-E21670FF0149}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
