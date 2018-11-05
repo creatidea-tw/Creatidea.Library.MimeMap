@@ -24,7 +24,7 @@ There is different behavior with [samuelneff](https://github.com/samuelneff/Mime
 **This package will return all possible mime.**
 
 For example: `.mp3` and `zip` will have multi mime type depend on various browser, see: https://stackoverflow.com/a/28021591/1799047
-`.zip` will have three mime type: `application/zip, application/octet-stream, application/x-zip-compressed`
+, `.zip` will have three mime type: `application/zip, application/octet-stream, application/x-zip-compressed`
 
 ## Installation
 
