@@ -1,6 +1,6 @@
 # Changelog
 
-## ## [v2.0.0](https://github.com/lettucebo/MimeTypeMap.List/tree/v2.0.0) (2018-11-05)
+## [v2.0.0](https://github.com/lettucebo/MimeTypeMap.List/tree/v2.0.0) (2018-11-05)
 [Full Changelog](https://github.com/lettucebo/MimeTypeMap.List/compare/v1.1.0...v2.0.0)
 
 **Implemented enhancements:**
