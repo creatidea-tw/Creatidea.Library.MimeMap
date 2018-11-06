@@ -40,11 +40,6 @@ Install-Package MimeTypeMap.List
 
 Support .NET 4.5 above or .NET Core 1.0 above
 
-## Collaboration
-
-Please submit pull requests for any additions. Thanks!
-
-
 ## Usage
 
 After installation MimeTypeMap, include the following using statement in your class:
@@ -74,3 +69,8 @@ Pass in a mime type and get an extension back. If the mime type is not registere
 ### Example
 
 see the example project and try for yourself
+
+
+## Collaboration
+
+Please submit pull requests for any additions. Thanks!
