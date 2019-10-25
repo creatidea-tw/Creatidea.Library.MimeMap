@@ -21,7 +21,7 @@ Provides a huge two-way mapping of file extensions to mime types and mime types 
 
 There is a little different behavior between [samuelneff](https://github.com/samuelneff/MimeTypeMap) version. 
 
-In my experience, sometimes for one extension will have different mime type depend on various browser. 
+In my experience, one extension sometimes will have different mime type depend on various browser. 
 
 **This package will return all match mime.**
 
