@@ -56,7 +56,7 @@ namespace MimeTypeMap.List
                 throw new ArgumentException($"Requested mime type is not valid: {mimeType}", nameof(mimeType));
             }
 
-            return Mappings.Value.Where(s => s.Value.Contains(mimeType.ToLower())).Select(s => s.Key);
+            return Mappings.Value.Where(s => s.Value.Contains(mimeType, StringComparer.OrdinalIgnoreCase)).Select(s => s.Key);
         }
     }
 }
