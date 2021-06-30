@@ -36,10 +36,10 @@ stages:
               arguments: '--configuration $(BuildConfiguration)'
 
           - task: NuGetCommand@2
-            displayName: 'NuGet pack X.PagedList.Mvc.Bootstrap4.Core'
+            displayName: 'NuGet pack MimeTypeMap.List'
             inputs:
               command: 'pack'
-              packagesToPack: 'src/X.PagedList.Mvc.Bootstrap4.Core\X.PagedList.Mvc.Bootstrap4.Core.csproj'
+              packagesToPack: 'src/MimeTypeMap.List\MimeTypeMap.List.csproj'
               includeSymbols: true
 
           - task: PublishBuildArtifacts@1

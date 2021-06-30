@@ -2,10 +2,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>MimeTypeMap.List</id>
-    <version>2.0.3</version>
     <title>MimeTypeMap.List</title>
-    <authors>Money</authors>
-    <owners>Money</owners>
+    <version>$version$</version>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>http://opensource.org/licenses/Apache-2.0</licenseUrl>
     <projectUrl>https://github.com/lettucebo/MimeTypeMap.List</projectUrl>
