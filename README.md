@@ -1,6 +1,7 @@
 # MimeTypeMap.List
 
 [![Build Status](https://dev.azure.com/lettucebo/Github.Build/_apis/build/status/MimeTypeMap.List.Build?branchName=master)](https://dev.azure.com/lettucebo/Github.Build/_build/latest?definitionId=21&branchName=master)
+[![Nuget](https://img.shields.io/nuget/dt/MimeTypeMap.List?label=Nuget)](https://www.nuget.org/packages/MimeTypeMap.List/)
 
 简体中文：[README.CN.md](https://github.com/lettucebo/MimeTypeMap.List/blob/master/README.CN.md)
 <br/>
