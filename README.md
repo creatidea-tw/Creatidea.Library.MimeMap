@@ -38,7 +38,7 @@ Install-Package MimeTypeMap.List
 
 ## Support Platform
 
-Support .NET 4.5 above or .NET Core 1.0 above
+Support .NET 4.5 above or .NET Standard 2.0 above
 
 ## Usage
 
