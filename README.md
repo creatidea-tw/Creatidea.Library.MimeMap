@@ -1,4 +1,7 @@
 # MimeTypeMap.List
+
+[![Build Status](https://dev.azure.com/lettucebo/Github.Build/_apis/build/status/MimeTypeMap.List.Build?branchName=master)](https://dev.azure.com/lettucebo/Github.Build/_build/latest?definitionId=21&branchName=master)
+
 简体中文：[README.CN.md](https://github.com/lettucebo/MimeTypeMap.List/blob/master/README.CN.md)
 <br/>
 正體中文：[README.TW.md](https://github.com/lettucebo/MimeTypeMap.List/blob/master/README.TW.md)
