@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>MimeTypeMap.List</id>
+    <version>2.0.3</version>
+    <title>MimeTypeMap.List</title>
+    <authors>Money</authors>
+    <owners>Money</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>http://opensource.org/licenses/Apache-2.0</licenseUrl>
+    <projectUrl>https://github.com/lettucebo/MimeTypeMap.List</projectUrl>
+    <iconUrl>https://i.imgur.com/3xZ4Cdx.png</iconUrl>
+    <description>Provides a huge two-way mapping of file extensions to mime types and mime types to file extensions.</description>
+    <summary>Provides a huge two-way mapping of file extensions to mime types and mime types to file extensions.</summary>
+    <releaseNotes>fix case sensitive comparisons, add some extensions</releaseNotes>
+    <copyright>Copyright  2018</copyright>
+    <language>en-US</language>
+    <dependencies>
+      <group targetFramework=".NETStandard1.0" />
+    </dependencies>
+  </metadata>
+</package>
