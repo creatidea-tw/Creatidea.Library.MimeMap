@@ -1,9 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.0</TargetFramework>
-    <Authors>Money</Authors>
-    <Version>2.0.3</Version>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Money Yu</Authors>
+    <Version>3.0.0</Version>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MimeTypeMapOfficial" Version="1.0.17" />
+  </ItemGroup>
 
 </Project>

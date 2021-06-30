@@ -1,5 +1,4 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -16,13 +15,6 @@ namespace MimeTypeMap.List.Test
 
             var result2 = MimeTypeMap.GetExtension("application/x-zip-compressed").ToList();
             CollectionAssert.AreEqual(result2, new List<string>() { ".zip" });
-        }
-
-        [TestMethod]
-        public void GetMultiExtensionTest()
-        {
-            var result = MimeTypeMap.GetExtension("audio/wav").ToList();
-            CollectionAssert.AreEqual(result, new List<string>() { ".wav", ".wave" });
         }
 
         [TestMethod]
