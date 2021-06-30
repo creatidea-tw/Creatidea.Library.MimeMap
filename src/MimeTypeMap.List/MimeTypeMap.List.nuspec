@@ -4,6 +4,8 @@
     <id>MimeTypeMap.List</id>
     <title>MimeTypeMap.List</title>
     <version>$version$</version>
+    <authors>Money</authors>
+    <owners>Money</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>http://opensource.org/licenses/Apache-2.0</licenseUrl>
     <projectUrl>https://github.com/lettucebo/MimeTypeMap.List</projectUrl>
