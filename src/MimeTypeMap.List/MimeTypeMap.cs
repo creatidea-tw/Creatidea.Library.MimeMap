@@ -6,6 +6,28 @@ namespace MimeTypeMap.List
 {
     public static class MimeTypeMap
     {
+        private static readonly Lazy<IDictionary<string, List<string>>> Mappings;
+        private static readonly Dictionary<string, List<string>> SpecialMappings =
+            new Dictionary<string, List<string>>(StringComparer.OrdinalIgnoreCase)
+            {
+                {".mp3", new List<string>() {"audio/mpeg", "audio/mpeg3", "audio/x-mpeg-3"}},
+                {".zip", new List<string>() {"application/zip", "application/octet-stream", "application/x-zip-compressed"} }
+            };
+        static MimeTypeMap()
+        {
+            Mappings = new Lazy<IDictionary<string, List<string>>>(BuildMappings);
+        }
+
+        private static IDictionary<string, List<string>> BuildMappings()
+        {
+            var mapping = MimeMapping.Mappings;
+            foreach (var pair in SpecialMappings)
+            {
+                mapping[pair.Key] = pair.Value;
+            }
+            return mapping;
+        }
+
         /// <summary>
         /// Gets the MIME by file extension.
         /// </summary>
@@ -24,12 +46,7 @@ namespace MimeTypeMap.List
                 extension = $".{extension}";
             }
 
-            if (IsSpecialExtension(extension))
-            {
-                return specialMappings.TryGetValue(extension, out List<string> mime) ? mime : new List<string>() { "application/octet-stream" };
-            }
-
-            return new List<string>() { MimeTypes.MimeTypeMap.GetMimeType(extension) ?? "application/octet-stream" };
+            return Mappings.Value.TryGetValue(extension, out List<string> mime) ? mime : new List<string>() { "application/octet-stream" };
         }
 
         /// <summary>
@@ -49,31 +66,9 @@ namespace MimeTypeMap.List
                 throw new ArgumentException($"Requested mime type is not valid: {mimeType}", nameof(mimeType));
             }
 
-            if (IsSpecialMimeType(mimeType))
-            {
-                var extension = specialMappings.FirstOrDefault(x => x.Value.Contains(mimeType, StringComparer.OrdinalIgnoreCase)).Key;
-                return new List<string>() { extension };
-            }
-
-            return new List<string>() { MimeTypes.MimeTypeMap.GetExtension(mimeType) };
+            return Mappings.Value.Where(s => s.Value.Contains(mimeType, StringComparer.OrdinalIgnoreCase)).Select(s => s.Key);
         }
 
-        private static bool IsSpecialExtension(string extension)
-        {
-            return extension == ".mp3" || extension == ".zip";
-        }
 
-        private static bool IsSpecialMimeType(string mimeType)
-        {
-            var extension = specialMappings.FirstOrDefault(x => x.Value.Contains(mimeType, StringComparer.OrdinalIgnoreCase)).Key;
-            return extension == ".mp3" || extension == ".zip";
-        }
-
-        private static Dictionary<string, List<string>> specialMappings =
-            new Dictionary<string, List<string>>(StringComparer.OrdinalIgnoreCase)
-            {
-                {".mp3", new List<string>() {"audio/mpeg", "audio/mpeg3", "audio/x-mpeg-3"}},
-                {".zip", new List<string>() {"application/zip", "application/octet-stream", "application/x-zip-compressed"} }
-            };
     }
 }

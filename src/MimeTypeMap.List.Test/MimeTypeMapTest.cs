@@ -18,6 +18,20 @@ namespace MimeTypeMap.List.Test
         }
 
         [TestMethod]
+        public void GetMultiExtensionTest01()
+        {
+            var result = MimeTypeMap.GetExtension("audio/wav").ToList();
+            CollectionAssert.AreEqual(result, new List<string>() { ".wav", ".wave" });
+        }
+
+        [TestMethod]
+        public void GetMultiExtensionTest02()
+        {
+            var result = MimeTypeMap.GetExtension("application/vnd.ms-excel").ToList();
+            CollectionAssert.AreEqual(result, new List<string>() { ".slk", ".xla", ".xlc", ".xld", ".xlk", ".xll", ".xlm", ".xls", ".xlt", ".xlw" });
+        }
+
+        [TestMethod]
         public void GetExtensionContainTest()
         {
             var result = MimeTypeMap.GetExtension("audio/wav").ToList();

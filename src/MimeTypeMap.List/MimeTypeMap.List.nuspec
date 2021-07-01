@@ -12,12 +12,11 @@
     <iconUrl>https://i.imgur.com/3xZ4Cdx.png</iconUrl>
     <description>Provides a huge two-way mapping of file extensions to mime types and mime types to file extensions.</description>
     <summary>Provides a huge two-way mapping of file extensions to mime types and mime types to file extensions.</summary>
-    <releaseNotes>upgrade to .net standard 2.0, also use MimeTypeMapOfficial as base to refactor</releaseNotes>
+    <releaseNotes>Change the way to maintain mapping list</releaseNotes>
     <copyright>Copyright  2018</copyright>
     <language>en-US</language>
     <dependencies>
-      <group targetFramework=".NETStandard2.0">
-        <dependency id="MimeTypeMapOfficial" version="1.0.17" />
+      <group targetFramework=".NETStandard1.0">
       </group>
     </dependencies>
   </metadata>

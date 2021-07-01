@@ -42,11 +42,11 @@ Install-Package MimeTypeMap.List
 
 ## Support Platform
 
-Support .NET 4.6.1 above or .NET Standard 2.0 above
+Support .NET 4.5 above or .NET Standard 1.0 above
 
 ## Usage
 
-After installation MimeTypeMap, include the following using statement in your class:
+After installation MimeTypeMap.List, include the following using statement in your class:
 
 ```cs
 using MimeTypeMap.List;
